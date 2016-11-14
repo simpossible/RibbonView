@@ -85,6 +85,9 @@
         
         if (_gradientLayer) {
             
+            [self.layer addSublayer:_gradientLayer];
+            _gradientLayer.mask = _shapeLayer;
+            
         }else {
             CAGradientLayer *gradientLayer = [CAGradientLayer layer];
             gradientLayer.frame = self.bounds;
