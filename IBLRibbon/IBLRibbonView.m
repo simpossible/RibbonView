@@ -44,13 +44,24 @@
     if (self = [super init]) {
         
         [self initialParameters];
-        self.backgroundColor = [UIColor clearColor];
     }
     
     return self;
 }
 
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self initialParameters];
+    }
+    return  self;
+}
+
+
 - (void)initialParameters {
+    
+    
+    self.backgroundColor = [UIColor clearColor];
     
     _flatDegree = 5;
     _startPoint = 0;
